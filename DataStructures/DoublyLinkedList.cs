@@ -17,6 +17,17 @@ namespace DoublyLinkedListImplementation
     {
         private Node headNode;
 
+        public void PrintAllNodes()
+        {
+            Node current = headNode;
+
+            while (current.nextNode != null)
+            {
+                Console.Write("[" + current.data + "]");
+                current = current.nextNode;
+            }
+        }
+
         public void AddNode(int data)
         {
             if(headNode == null)
@@ -44,15 +55,34 @@ namespace DoublyLinkedListImplementation
             }
         }
 
-        public void PrintAllNodes()
+        public void AddNode(int position, int data)
         {
-            Node current = headNode;
 
-            while(current.nextNode != null)
-            {
-                Console.Write("[" + current.data + "]");
-                current = current.nextNode;
-            }
+        }
+
+        public void Remove(int position)
+        {
+
+        }
+
+        public int GetData(int position)
+        {
+            return 0;
+        }
+
+        public void SetData(int position, int data)
+        {
+
+        }
+
+        public int Count()
+        {
+            return 0;
+        }
+
+        public bool IsEmpty()
+        {
+            return false;
         }
     }
 }

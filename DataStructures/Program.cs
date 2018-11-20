@@ -19,12 +19,26 @@ namespace DataStructures
             Console.WriteLine("Linked List Check:");
 
             LinkedList myList = new LinkedList();
-            myList.AddNode(0);
-            myList.AddNode(1);
+            myList.AddNode(0, 1);
+            myList.AddNode(2);
             myList.AddNode(3);
-            myList.AddNode(4);
-            myList.AddNode(2, 2);
+            myList.AddNode(5);
+            myList.AddNode(6);
+            myList.AddNode(0, 0);
+            myList.AddNode(4, 4);
+            myList.AddNode(7, 7);
+
+            myList.Remove(5);
+            myList.AddNode(5, 5);
+            myList.Remove(myList.Count()-1);
+
+            myList.SetData(6, 999);
+
             myList.PrintAllNodes();
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Value at 4th index: {0}", myList.GetData(4));
 
             Console.WriteLine();
             Console.WriteLine();
