@@ -40,6 +40,15 @@ namespace DataStructures
             Console.WriteLine();
             Console.WriteLine("Value at 4th index: {0}", myList.GetData(4));
 
+            LinkedList myList2 = new LinkedList();
+            myList2.AddNode(1);
+            myList2.AddNode(3);
+            myList2.AddNode(5);
+            myList2.AddNode(0, 0);
+            myList2.AddNode(2, 2);
+            myList2.AddNode(4, 4);
+            myList2.PrintAllNodes();
+
             Console.WriteLine();
             Console.WriteLine();
 
@@ -48,9 +57,22 @@ namespace DataStructures
             Console.WriteLine("Doubly Linked List Check:");
 
             DoublyLinkedList myDoublyList = new DoublyLinkedList();
+            myDoublyList.AddNode(1);
             myDoublyList.AddNode(3);
-            myDoublyList.AddNode(10);
             myDoublyList.AddNode(5);
+            myDoublyList.AddNode(0, 0);
+            myDoublyList.AddNode(2, 2);
+            myDoublyList.AddNode(4, 4);
+            myDoublyList.AddNode(2, 999);
+
+            myDoublyList.Remove(2);
+            myDoublyList.AddNode(6, 999);
+
+            if(myDoublyList.GetData(6) != 6)
+            {
+                myDoublyList.SetData(6, 6);
+            }
+
             myDoublyList.PrintAllNodes();
 
             Console.WriteLine();

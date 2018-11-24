@@ -57,7 +57,7 @@ namespace LinkedListImplementation
             Node toAdd = new Node();
             toAdd.data = data;
 
-            if (position == this.Count()-1)
+            if (position == this.Count() && !this.IsEmpty())
             {
                 Node current = headNode;
 
@@ -75,7 +75,6 @@ namespace LinkedListImplementation
                     headNode = new Node();
 
                     headNode.data = data;
-                    headNode.nextNode = null;
                 }
                 else
                 {
@@ -121,7 +120,7 @@ namespace LinkedListImplementation
                 headNode = null;
                 headNode = linkNode;
             }
-            else if(position == this.Count() - 1)
+            else if(position == this.Count()-1)
             {
                 Node current = headNode;
                 Node prevNode = null;
